@@ -1,7 +1,12 @@
+# • It is a collection of small python functions & classes which make common patterns shorter & easier. 
+# • It provides basic & essential source code snippets 3 to the programmers that can lead to clean & maintainable code.
+
+
+
 import os
 from box.exceptions import BoxValueError
 import yaml
-from textSummarizer.logging import logger
+from src.textSummarizer.logging import logger
 from ensure import ensure_annotations
 from box import ConfigBox
 from pathlib import Path
@@ -35,7 +40,7 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
     
 
 
-@ensure_annotations
+@ensure_annotations   # helps with datatypes
 def create_directories(path_to_directories: list, verbose=True):
     """create list of directories
 
